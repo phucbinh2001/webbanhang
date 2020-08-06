@@ -1,0 +1,224 @@
+*{                          /*reset định dạng các thuộc tính*/
+    box-sizing: border-box; /* định nghĩa cách chiều rộng và chiều cao của một phần tử */
+}
+body{
+    background-color: #e1e2e4;          /*màu nền của bài*/
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    padding: 0;             /*định dạng giá 0 cho padding toàn bài*/
+    margin: 0;              /*định dạng giá 0 cho margin toàn bài*/
+}
+/* bỏ gạch chân cho toàn bộ bài */
+a{
+    text-decoration: none;
+}
+
+/* star header*/
+header{
+    width: 100%;
+    height: 100px;
+    background-color: white;
+}
+.top-menu{
+    width: 1200px;
+    height: 60px;
+    margin: 0 auto;
+    padding-top: 15px;
+}
+.top-menu .logo{
+    float: left;
+    width: 380px;
+    margin-left: 10px;
+}
+.top-menu form{
+    width: 450px;
+    height: auto;
+    float: left;
+}
+.top-menu form .search{
+    width: 353px;
+    padding: 4px;
+}
+.top-menu form .btn{
+    padding: 5.6px;
+    border: none;                   /*không viền*/
+    background-color: #1ba085;
+    color: white;
+    text-transform: capitalize;    /*viết hoa chữ cái đầu tiên */
+}
+.top-menu .login{
+    float: right;
+} 
+.top-menu .login button{
+    width: 100px;
+    height: 27px;
+    border: none;                   /*không viền*/
+    border-radius: 2px;             /* bo viền tròn*/
+    background-color: #1ba085;
+    text-transform: capitalize;     /*viết hoa chữ cái đầu tiên */
+} 
+.top-menu .login button a{
+    color: white;
+} 
+
+/* start menu*/
+.bot-menu{
+    width: 1200px;
+    height: 40px;
+    margin: 0 auto;
+    text-align: center;
+}
+.bot-menu li{
+    list-style: none;
+    display: inline;            /*nằm ngang*/
+    padding: 20px;
+}
+.bot-menu li a{
+    color: black;
+    text-transform: uppercase;      /*viết hoa toàn bộ*/
+    line-height: 40px;              /*căn dọc theo chiều cao*/
+}
+.bot-menu li a:hover{
+    color: #1ba085;
+}
+/* end menu*/
+
+
+/* end header */
+
+
+/* star section */
+section{
+    overflow: auto;
+    width: 1200px;
+    margin: auto;
+    padding-top: 10px;
+}
+.product{
+    height: 80px;
+}
+.product p{
+    border-bottom: 1px solid #1ba085;
+    font-size: 18px;
+    color: #1ba085;
+    text-transform: uppercase;
+}
+.row-book{
+    width: 200px;
+    height: 286px;
+    float: left;
+    margin-bottom: 20px;
+}
+.book{
+    position: relative;         /*phần tử mẹ book*/
+    width: 190px;
+    height: 270px;
+    background-color: white;
+    
+}
+.book:hover{
+    border: 1px solid #1ba085;      /*màu viền*/
+}
+
+.book img{
+    width: 120px;
+    height: 175px;
+    position: absolute;             /*phần tử con của book*/
+    top: -20px;
+    left: 34px;
+}
+.book .name{
+    width: 150px;
+    margin: auto;
+    position: absolute;             /*phần tử con của book*/
+    bottom: 75px;
+    left: 20px;
+    text-transform: capitalize;     /*viết hoa chữ cái đầu*/
+}
+.book .view{
+    position: absolute;             /*phần tử con của book*/
+    bottom: 5px;
+    left: 20px;
+    font-size: 11px;
+    color: gray;
+}
+.book button{
+    position: absolute;             /*phần tử con của book*/
+    bottom: 40px;
+    right: 45px;
+    width: 100px;
+    height: 26px;
+    border: none;                   /*không viền*/
+    border-radius: 2px;
+    background-color: #1ba085;
+}
+.book button:hover{
+    background-color: #1b806b;
+}
+.book button a{
+    color: white;
+}
+/*end section*/
+
+/*start slogan*/
+.slogan{
+    width: 100%;
+    height: 140px;
+    text-align: center;
+    background-color: #1ba085;
+    color: white;
+    padding-top: 20px;
+}
+.slogan .author{
+    font-size: large;
+}
+/*end sologan*/
+
+/*start footer*/
+footer{
+    width: 100%;
+    height: 210px;
+    padding: 20px;
+}
+.footer-transparent{
+    width: 1200px;
+    margin: auto;
+}
+.information{
+    width: 20%;
+    float: left;
+}
+.contact{
+    width: 60%;
+    float: left;
+}
+.connect{
+    width: 20%;
+    float: left;
+}
+.connect a{
+    margin: 10px;
+    width: 40px;
+    height: 40px;
+    background-color: #ccc;
+    display: inline-block;       /*nằm ngang*/
+    border-radius: 50%;         /*bo tròn đường viền*/
+    font-size: 20px;    
+    transition: .3s linear;     /*chuyển động*/
+    position: relative;         /*phần tử mẹ */
+    color: white;
+}
+.connect a:hover{
+    transform: scale(1.3);          /*phóng to theo trục x y*/
+    background-color: #1ba085;
+}
+.connect a i::before{
+    position: absolute;         /*phần tử con của (connect a)*/
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 40px;          /*căn dọc theo chiều cao*/
+}
+/*end footer*/

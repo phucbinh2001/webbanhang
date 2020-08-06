@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waka</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="top-menu" id="myheader">
+            <div class="logo">
+                <img src="img/logo.png" alt="">
+            </div>
+            <form>
+                <input class="search" type="text" placeholder="Nhập tên sách, tuyên tập, tác giả...">
+                <button class="btn">tìm kiếm</button>
+            </form>
+            <div class="login">
+                <button><a href="contact.html">đăng nhập</a></button>
+                <button><a href="contact.html">đăng ký</a></button>
+            </div>
+        </div>
+        <div class="bot-menu">
+            <li><a href="index.html">trang chủ</a></li>
+            <li><a href="product.html">sản phẩm</a></li>
+            <li><a href="about.html">giới thiệu</a></li>
+            <li><a href="contact.html">liên hệ</a></li>
+            <li><a href="news.html">tin tức</a></li>
+        </div>
+    </header>
+    <script>
+        window.onscroll = function() {
+            myFunction()
+        };
+
+        var header = document.getElementById("myheader");
+        var sticky = header.offsetTop;
+
+        function myFunction() {
+            if (window.pageYOffset > sticky) {
+                header.classList.add("sticky");
+            } else {
+                header.classList.remove("sticky");
+            }
+        }
+    </script>
+    <section><!--  body -->
+        <div class="banner">
+            <img src="img/bn.jpg" alt="">
+        </div>
+        <div class="content">
+            <div class="left-siderbar">
+                <p class="h2">DANH MỤC</p>
+                <li><a href="">sách nói</a></li>
+                <li><a href="">kinh dị</a></li>
+                <li><a href="">kinh doanh</a></li>
+                <li><a href="">ngôn tình</a></li>
+                <li><a href="">sách nói</a></li>
+                <li><a href="">kinh dị</a></li>
+                <li><a href="">kinh doanh</a></li>
+                <li><a href="">ngôn tình</a></li>
+                <li><a href="">sách nói</a></li>
+                <li><a href="">kinh dị</a></li>
+                <li><a href="">kinh doanh</a></li>
+                <li><a href="">ngôn tình</a></li>
+                <li><a href="">sách nói</a></li>
+                <li><a href="">kinh dị</a></li>
+                <li><a href="">kinh doanh</a></li>
+                <li><a href="">ngôn tình</a></li>
+            </div>
+            <div class="right-siderbar">
+
+                <div class="content-header">
+                    <a class="title" href="">Miễn phí hot</a>
+
+                    <!--menu content-->
+                    <ul class="content-header-nav">
+                        <li><a href="">văn học</a></li>
+                        <li><a href="">kinh doanh</a></li>
+                        <li><a href="">ngôn tình</a></li>
+                        <li><a href="">kỹ năng</a></li>
+                        <li><a href="">sách nói</a></li>
+                    </ul>
+                </div>
+
+                <div class="wrap-book">
+                    <div class="box-transparent">
+                        <div class="book">
+                            <img src="img/img1.jpg" alt="">
+                            <div class="title">
+                                <p>series sức mạnh hắc ám</p>
+                                <p class="author">Janet S. Fox <br><br> 56 vote <br><br> tóm tắt tuyển tập
+                                </p>
+                            </div>
+                            <div class="view">
+                                1.400 lượt xem
+                            </div>
+                            <button><a href="detailProduct.html">Chi Tiết</a></button>
+                        </div>
+                    </div>
+                    <div class="box-transparent">
+                        <div class="book">
+                            <img src="img/img2.jpg" alt="">
+                            <div class="title">
+                                <p>người giỏi không bởi học nhiều</p>
+                                <p class="author">John. Doe <br><br> 89 vote <br><br> tóm tắt tuyển tập
+                                </p>
+                            </div>
+                            <div class="view">
+                                13.400 lượt xem
+                            </div>
+                            <button><a href="detailProduct.html">Chi Tiết</a></button>
+                        </div>
+                    </div>
+                    <div class="box-transparent">
+                        <div class="book">
+                            <img src="img/img3.jpg" alt="">
+                            <div class="title">
+                                <p>nơi giấc mơ em thuộc về</p>
+                                <p class="author">Tăn Nhật Tuệ <br><br> 106 vote <br><br> tóm tắt tuyển tập
+                                </p>
+                            </div>
+                            <div class="view">
+                                2.400 lượt xem
+                            </div>
+                            <button><a href="detailProduct.html">Chi Tiết</a></button>
+                        </div>
+                    </div>
+                    <div class="box-transparent">
+                        <div class="book">
+                            <img src="img/img4.jpg" alt="">
+                            <div class="title">
+                                <p>ma vân thư viện</p>
+                                <p class="author">Bộ Phi Yên <br><br> 19 vote <br><br> tóm tắt tuyển tập
+                                </p>
+                            </div>
+                            <div class="view">
+                                3.900 lượt xem
+                            </div>
+                            <button><a href="detailProduct.html">Chi Tiết</a></button>
+                        </div>
+                    </div>
+                    <div class="box-transparent">
+                        <div class="book">
+                            <img src="img/img5.jpg" alt="">
+                            <div class="title">
+                                <p>nụ hôn đầu</p>
+                                <p class="author">Jack Canfield <br><br> 29 vote <br><br> tóm tắt tuyển tập
+                                </p>
+                            </div>
+                            <div class="view">
+                                14.060 lượt xem
+                            </div>
+                            <button><a href="detailProduct.html">Chi Tiết</a></button>
+                        </div>
+                    </div>
+                    <div class="box-transparent">
+                        <div class="book">
+                            <img src="img/img6.jpg" alt="">
+                            <div class="title">
+                                <p>series biên niên sử nhà</p>
+                                <p class="author">Janet S. Fox <br><br> 56 vote <br><br> tóm tắt tuyển tập
+                                </p>
+                            </div>
+                            <div class="view">
+                                1.200 lượt xem
+                            </div>
+                            <button><a href="detailProduct.html">Chi Tiết</a></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-----------------slogan 1---------------->
+    <div class="wrap">
+        <div class="left-wrap">
+            <p class="txt">lịch phát hành</p>
+            <p class="year"> 2020</p>
+            <p class="month">tháng 6</p>
+        </div>
+        <div class="right-wrap">
+            <div class="scrollbar" id="style">
+                <div class="trans">
+                    <div class="box-calendar">
+                        <div class="calendar">
+                            <p class="week-day">thứ 2</p>
+                            <p class="date">01/06</p>
+                        </div>
+                        <div class="txt-calendar">
+                            <p class="name"><a href="">hành tẩu âm dương</a>
+                            </p>
+                            <p class="episode">tập 11</p>
+                        </div>
+                    </div>
+                    <div class="box-calendar">
+                        <div class="calendar">
+                            <p class="week-day">thứ 2</p>
+                            <p class="date">01/06</p>
+                        </div>
+                        <div class="txt-calendar">
+                            <p class="name"><a href="">hành tẩu âm dương</a>
+                            </p>
+                            <p class="episode">tập 11</p>
+                        </div>
+                    </div>
+                    <div class="box-calendar">
+                        <div class="calendar">
+                            <p class="week-day">thứ 2</p>
+                            <p class="date">01/06</p>
+                        </div>
+                        <div class="txt-calendar">
+                            <p class="name"><a href="">hành tẩu âm dương</a>
+                            </p>
+                            <p class="episode">tập 11</p>
+                        </div>
+                    </div>
+                    <div class="box-calendar">
+                        <div class="calendar">
+                            <p class="week-day">thứ 2</p>
+                            <p class="date">01/06</p>
+                        </div>
+                        <div class="txt-calendar">
+                            <p class="name"><a href="">hành tẩu âm dương</a>
+                            </p>
+                            <p class="episode">tập 11</p>
+                        </div>
+                    </div>
+                    <div class="box-calendar">
+                        <div class="calendar">
+                            <p class="week-day">thứ 2</p>
+                            <p class="date">01/06</p>
+                        </div>
+                        <div class="txt-calendar">
+                            <p class="name"><a href="">hành tẩu âm dương</a>
+                            </p>
+                            <p class="episode">tập 11</p>
+                        </div>
+                    </div>
+                    <div class="box-calendar">
+                        <div class="calendar">
+                            <p class="week-day">thứ 2</p>
+                            <p class="date">01/06</p>
+                        </div>
+                        <div class="txt-calendar">
+                            <p class="name"><a href="">hành tẩu âm dương</a>
+                            </p>
+                            <p class="episode">tập 11</p>
+                        </div>
+                    </div>
+                    <div class="box-calendar">
+                        <div class="calendar">
+                            <p class="week-day">thứ 2</p>
+                            <p class="date">01/06</p>
+                        </div>
+                        <div class="txt-calendar">
+                            <p class="name"><a href="">hành tẩu âm dương</a>
+                            </p>
+                            <p class="episode">tập 11</p>
+                        </div>
+                    </div>
+                    <div class="box-calendar">
+                        <div class="calendar">
+                            <p class="week-day">thứ 2</p>
+                            <p class="date">01/06</p>
+                        </div>
+                        <div class="txt-calendar">
+                            <p class="name"><a href="">hành tẩu âm dương</a>
+                            </p>
+                            <p class="episode">tập 11</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-----------------slogan 1---------------->
+
+    <!-----------------mới nhất trong tuần---------------->
+    <section class="new-week">
+        <div class="product">
+            <p>Mới Trong Tuần</p>
+        </div>
+
+        <div class="row">
+            <div class="card-book">
+                <div>
+                    <a href=""><img src="img/img6.jpg" alt=""></a>
+                    <div class="txt">
+                        <p class="name"><a href="">thinh thế kiểu y</a></p>
+                        <p class="author"><a href="">văn thanh</a></p>
+                        <p class="view">500 lượt xem</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-book">
+                <div>
+                    <a href=""><img src="img/img7.jpg" alt=""></a>
+                    <div class="txt">
+                        <p class="name"><a href="">thinh thế kiểu y</a></p>
+                        <p class="author"><a href="">văn thanh</a></p>
+                        <p class="view">500 lượt xem</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-book">
+                <div>
+                    <a href=""><img src="img/img8.jpg" alt=""></a>
+                    <div class="txt">
+                        <p class="name"><a href="">thinh thế kiểu y</a></p>
+                        <p class="author"><a href="">văn thanh</a></p>
+                        <p class="view">500 lượt xem</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-book">
+                <div>
+                    <a href=""><img src="img/img9.jpg" alt=""></a>
+                    <div class="txt">
+                        <p class="name"><a href="">thinh thế kiểu y</a></p>
+                        <p class="author"><a href="">văn thanh</a></p>
+                        <p class="view">500 lượt xem</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-book">
+                <div>
+                    <a href=""><img src="img/img10.jpg" alt=""></a>
+                    <div class="txt">
+                        <p class="name"><a href="">thinh thế kiểu y</a></p>
+                        <p class="author"><a href="">văn thanh</a></p>
+                        <p class="view">500 lượt xem</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-book">
+                <div>
+                    <a href=""><img src="img/img11.jpg" alt=""></a>
+                    <div class="txt">
+                        <p class="name"><a href="">thinh thế kiểu y</a></p>
+                        <p class="author"><a href="">văn thanh</a></p>
+                        <p class="view">500 lượt xem</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-------------------mới nhất trong tuần----------------->
+
+    <!-----------------sách mới nhất---------------->
+    <section class="new-week">
+        <div class="product">
+            <p>sách mới nhất</p>
+        </div>
+
+        <div class="row">
+            <div class="card-book">
+                <div>
+                    <a href=""><img src="img/img12.jpg" alt=""></a>
+                    <div class="txt">
+                        <p class="name"><a href="">thinh thế kiểu y</a></p>
+                        <p class="author"><a href="">văn thanh</a></p>
+                        <p class="view">500 lượt xem</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-book">
+                <div>
+                    <a href=""><img src="img/img13.jpg" alt=""></a>
+                    <div class="txt">
+                        <p class="name"><a href="">thinh thế kiểu y</a></p>
+                        <p class="author"><a href="">văn thanh</a></p>
+                        <p class="view">500 lượt xem</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-book">
+                <div>
+                    <a href=""><img src="img/img14.jpg" alt=""></a>
+                    <div class="txt">
+                        <p class="name"><a href="">thinh thế kiểu y</a></p>
+                        <p class="author"><a href="">văn thanh</a></p>
+                        <p class="view">500 lượt xem</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-book">
+                <div>
+                    <a href=""><img src="img/img15.jpg" alt=""></a>
+                    <div class="txt">
+                        <p class="name"><a href="">thinh thế kiểu y</a></p>
+                        <p class="author"><a href="">văn thanh</a></p>
+                        <p class="view">500 lượt xem</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-book">
+                <div>
+                    <a href=""><img src="img/img16.jpg" alt=""></a>
+                    <div class="txt">
+                        <p class="name"><a href="">thinh thế kiểu y</a></p>
+                        <p class="author"><a href="">văn thanh</a></p>
+                        <p class="view">500 lượt xem</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-book">
+                <div>
+                    <a href=""><img src="img/img17.jpg" alt=""></a>
+                    <div class="txt">
+                        <p class="name"><a href="">thinh thế kiểu y</a></p>
+                        <p class="author"><a href="">văn thanh</a></p>
+                        <p class="view">500 lượt xem</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-------------------sách mới nhất----------------->
+
+    <!-----------------bán chạy nhất---------------->
+    <section class="new-week">
+        <div class="product">
+            <p>bán chạy nhất </p>
+        </div>
+
+        <div class="row">
+            <div class="card-book">
+                <div>
+                    <a href=""><img src="img/img18.jpg" alt=""></a>
+                    <div class="txt">
+                        <p class="name"><a href="">thinh thế kiểu y</a></p>
+                        <p class="author"><a href="">văn thanh</a></p>
+                        <p class="view">500 lượt xem</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-book">
+                <div>
+                    <a href=""><img src="img/img19.jpg" alt=""></a>
+                    <div class="txt">
+                        <p class="name"><a href="">thinh thế kiểu y</a></p>
+                        <p class="author"><a href="">văn thanh</a></p>
+                        <p class="view">500 lượt xem</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-book">
+                <div>
+                    <a href=""><img src="img/img20.jpg" alt=""></a>
+                    <div class="txt">
+                        <p class="name"><a href="">thinh thế kiểu y</a></p>
+                        <p class="author"><a href="">văn thanh</a></p>
+                        <p class="view">500 lượt xem</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-book">
+                <div>
+                    <a href=""><img src="img/img21.jpg" alt=""></a>
+                    <div class="txt">
+                        <p class="name"><a href="">thinh thế kiểu y</a></p>
+                        <p class="author"><a href="">văn thanh</a></p>
+                        <p class="view">500 lượt xem</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-book">
+                <div>
+                    <a href=""><img src="img/img22.jpg" alt=""></a>
+                    <div class="txt">
+                        <p class="name"><a href="">thinh thế kiểu y</a></p>
+                        <p class="author"><a href="">văn thanh</a></p>
+                        <p class="view">500 lượt xem</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-book">
+                <div>
+                    <a href=""><img src="img/img23.jpg" alt=""></a>
+                    <div class="txt">
+                        <p class="name"><a href="">thinh thế kiểu y</a></p>
+                        <p class="author"><a href="">văn thanh</a></p>
+                        <p class="view">500 lượt xem</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-------------------bán chạy nhất----------------->
+
+    <!-------------------banner 2----------------->
+    <!--
+    <div class="bn">
+        <div class="img">
+            <div class="bn-tilte">
+                truyện tranh
+            </div>
+            <div class="bn-txt">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates, perspiciatis modi exercitationem, illum labore atque nam quaerat corrupti sint reprehenderit nisi architecto perferendis ea placeat optio et ut enim necessitatibus.
+            </div>
+        </div>
+
+    </div>
+    -->
+    <!-------------------banner 2----------------->
+
+    <div class="slogan">
+        <p class="author">MOMO, MICHAEL ENDE</p>
+        <p>" Vì thời gian là cuộc sống. Mà chúng ta cảm nhận cuộc sống bằng con tim "</p>
+    </div>
+
+    <footer>
+        <div class="footer-transparent">
+            <div class="information">
+                <div>THÔNG TIN HỮU ÍCH</div>
+                <P>
+                    Review Truyện - Cafe Sách <br><br> Tin waka <br><br> Giới thiệu chung <br><br> Thỏa thuận chung <br><br>
+                </P>
+
+            </div>
+            <div class="contact">
+                <div>THÔNG TIN LIÊN HỆ</div>
+                <p>
+                    Email: support@waka.vn <br><br> Tel: 0243791844 <br><br> Giấy xác nhận Đăng ký hoạt động phát hành xuất bản phẩm điện tử số 8132/XN-CXBIPH do Cục Xuất bản, <br> In và Phát hành cấp ngày 31/12/2019
+
+                </p>
+            </div>
+            <div class="connect">
+                <div>LIÊN KẾT</div>
+                <!-- start font awesome -->
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <!-- end font awesome -->
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
