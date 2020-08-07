@@ -46,6 +46,9 @@
                             <button><a href="">mua sách</a></button>
                         </div>
                     </div>
+                    <div class="">
+                        <iframe src="binhluan.php" frameborder="0" width="100%" height="300px"></iframe>
+                    </div>
                 </div>
 
                 <div class="right-wrap-cnt">

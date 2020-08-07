@@ -6,8 +6,9 @@
     include_once("../model/danhmuc.php");
     include_once("../model/sanpham.php");
     include_once("../model/tacgia.php");
+    include_once("../model/binhluan.php");
 
-    if (isset($_SESSION['sid'])&&($_SESSION['sid'])>0) {
+    // if (isset($_SESSION['sid'])&&($_SESSION['sid'])>0) {
         
     //Load data cho web o day
     $danhmuc = showdm();
@@ -46,8 +47,17 @@
             case 'productDetail':
                 if (isset($_GET['id'])&&$_GET['id']>0) {
                     $spct = showDetail($_GET['id']); 
+                    $binhluan = showbl();
                     include("../view/productDetail.php");
+                    include("binhluan.php");
                 }
+
+                if (isset($_POST['binhluan'])&&($_POST['binhluan'])) {
+                    $name = $_POST['name'];
+                    $noidung = $_POST['noidung'];
+                    thembl($name, $noidung);
+                }
+
                 break;
 
             case 'user':
@@ -55,9 +65,11 @@
                     unset($_SESSION['sid']);
                     unset($_SESSION['suser']);
                     header('location: index.php');
-                };
+                }else
+                    header('location: ../view/login/login.php');
+                ;
             break;
-            
+
             default:
                 include("../view/home.php");
                 break;
@@ -68,7 +80,7 @@
     
     
     include_once("../view/footer.php");
- }else{
-     header('location: ../view/login/login.php');
- }
+//  }else{
+//      header('location: ../view/login/login.php');
+//  }
 ?>

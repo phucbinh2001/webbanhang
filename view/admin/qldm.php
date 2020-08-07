@@ -18,8 +18,8 @@
             <span class="navbar-toggler-bar navbar-kebab"></span>
             <span class="navbar-toggler-bar navbar-kebab"></span>
           </button>
-          <div class="collapse navbar-collapse justify-content-end" id="navigation">
-            <!-- <form>
+          <!-- <div class="collapse navbar-collapse justify-content-end" id="navigation">
+              <form>
               <div class="input class="form-control"-group no-border">
                 <input class="form-control" type="text" value="" class="form-conthol" placeholder="Search...">
                 <div class="input class="form-control"-group-append">
@@ -28,7 +28,7 @@
                   </div>
                 </div>
               </div>
-            </form> -->
+            </form> 
             <ul class="navbar-nav">
               <li class="nav-item btn-rotate dropdown">
                 <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="thue" aria-expanded="false">
@@ -44,7 +44,7 @@
                 </div>
               </li>
             </ul>
-          </div>
+          </div> -->
         </div>
       </nav>
       <!-- End Navbar -->

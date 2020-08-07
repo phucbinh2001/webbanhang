@@ -22,7 +22,12 @@
                 <button class="btn">tìm kiếm</button>
             </form>
             <div class="login">
-                <button><a href="index.php?act=user&logout=1">Đăng xuất</a></button>
+                <?php
+                if (isset($_SESSION['sid'])&&($_SESSION['sid'])>0) {
+                    echo '<button><a href="index.php?act=user&logout=1">Đăng xuất</a></button>';
+                }else
+                    echo '<button><a href="index.php?act=user">Đăng nhập</a></button>';
+                ?>
             </div>
         </div>
         <div class="bot-menu">
