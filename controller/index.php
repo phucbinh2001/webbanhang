@@ -64,9 +64,10 @@
                 if (isset($_GET['logout'])&&($_GET['logout']==1)) {
                     unset($_SESSION['sid']);
                     unset($_SESSION['suser']);
-                    header('location: index.php');
-                }else
                     header('location: ../view/login/login.php');
+                }
+                // }else
+                //     header('location: ../view/login/login.php');
                 ;
             break;
 
