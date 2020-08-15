@@ -88,7 +88,7 @@
                   ?>
                 </select>
                 <input class="form-control" type="hidden" name="idsp" value="<?=$spct['id']?>">
-                <input class="btn btn-primary btn-round" type="submit" value="Cập nhật" name="update">
+                <input id="mauxanh" class="btn btn-primary btn-round" type="submit" value="Cập nhật" name="update">
             </form>
             <?php
               }else{
@@ -115,20 +115,20 @@
                     }
                   ?>
                 </select>
-                <input class="btn btn-primary btn-round" type="submit" value="Thêm" name="submit">
+                <input id="mauxanh" class="btn btn-primary btn-round" type="submit" value="Thêm" name="submit">
             </form><?php } ?>
             <table class="table">
                 <tr>
                 <thead class=" text-primary">
-                    <th>Id</th>
-                    <th>Danh mục</th>
-                    <th>Tác giả</th>
-                    <th>Tên</th>
-                    <th>Ảnh</th>
-                    <th>Giá</th>
-                    <th>Hot</th>
-                    <th>Sửa</th>
-                    <th>Xóa</th>
+                    <th id="chuxanh">Id</th>
+                    <th id="chuxanh">Danh mục</th>
+                    <th id="chuxanh">Tác giả</th>
+                    <th id="chuxanh">Tên</th>
+                    <th  id="chuxanh">Ảnh</th>
+                    <th  id="chuxanh">Giá</th>
+                    <th  id="chuxanh">Hot</th>
+                    <th  id="chuxanh">Sửa</th>
+                    <th  id="chuxanh">Xóa</th>
                 </thead>
                 </tr>
                 <?php

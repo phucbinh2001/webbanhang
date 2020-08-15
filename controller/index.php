@@ -24,11 +24,15 @@
         $act = $_GET['act'];
         switch ($act) {
             case 'product':
-                if(isset($_GET['idcata'])&&($_GET['idcata'])>0)
+                if(isset($_GET['idcata'])&&($_GET['idcata'])>0) {
                     $idcat = $_GET['idcata'];
-                else 
-                    $idcat = 0;
-                    $sanpham = showsp($idcat);
+                    // else
+                    // $idcat = 0;
+                    $sanpham = showsp($idcat);}
+                // }else if (isset($_GET['keyword'])&&($_GET['keyword'])>0) {
+                //     $keyw = $_GET['key'];
+                //     $sanpham = search($keyw);
+                // }
                 include("../view/product.php");
                 break;
             
@@ -47,15 +51,8 @@
             case 'productDetail':
                 if (isset($_GET['id'])&&$_GET['id']>0) {
                     $spct = showDetail($_GET['id']); 
-                    $binhluan = showbl();
                     include("../view/productDetail.php");
-                    include("binhluan.php");
-                }
-
-                if (isset($_POST['binhluan'])&&($_POST['binhluan'])) {
-                    $name = $_POST['name'];
-                    $noidung = $_POST['noidung'];
-                    thembl($name, $noidung);
+                    // include("binhluan.php");
                 }
 
                 break;
@@ -65,10 +62,46 @@
                     unset($_SESSION['sid']);
                     unset($_SESSION['suser']);
                     header('location: ../view/login/login.php');
-                }
-                // }else
-                //     header('location: ../view/login/login.php');
+                
+                }else
+                    header('location: ../view/login/login.php');
                 ;
+            break;
+
+            case 'search':
+                if (isset($_POST['search'])&&($_POST['search'])) {
+                    
+                    if(isset($_POST['key'])) 
+                        $key=$_POST['key'];
+                        $timkiem=search($key);
+                    include("../view/search.php");
+                }
+            break;
+
+            case 'cart':
+                if (isset($_POST['mua'])&&($_POST['mua'])) {
+                    if (!isset($_SESSION['cart'])) {
+                        $_SESSION['cart'] = [];
+                    } else {
+                        $vitri = -1;
+                        $id = $_POST['idsp'];   
+                        for ($i=0; $i < sizeof($_SESSION['cart']); $i++) { 
+                            if($id==$_SESSION['cart'][$i][3]) 
+                                $vitri = $i;
+                                $name = $_POST['namesp'];
+                                $soluong = 1;
+                                $price = $_POST['pricesp'];
+                                $img = $_POST['imgsp'];              
+                                $item = [$name, $price, $img, $id, $soluong];                           
+                        }
+                        if($vitri > -1) {
+                            $_SESSION['cart'][$vitri][4] += $soluong;
+                        }else{
+                            $_SESSION['cart'][] = $item;
+                        }
+                    }
+                }
+                include("../view/cart.php");
             break;
 
             default:

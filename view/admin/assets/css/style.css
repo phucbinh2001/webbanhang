@@ -65,3 +65,30 @@ form img {
 .sidebar .sidebar-wrapper {
     overflow: unset;
 }
+
+.login, .register {
+    background-color: transparent !important;
+    width: 160px;
+}
+
+.login button {
+    background-color: #1ba085;
+}
+
+.btn .btn-primary {
+    background-color: #1ba085 !important;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+}
+
+
+#mauxanh {
+    background-color: #1ba085;
+}
+
+#chuxanh {
+    color: #1ba085;
+}

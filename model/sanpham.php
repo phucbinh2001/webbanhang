@@ -55,6 +55,15 @@
         return $stmt->fetchAll();
     }
 
+    function search($keyw) {
+        $conn = connect();
+        $sql = "SELECT * from sanpham where name like '%".$keyw."%'";
+        $stmt = $conn->prepare($sql);
+        $stmt->execute();
+        $stmt->setFetchMode(PDO::FETCH_ASSOC);
+        return $stmt->fetchAll();
+    }
+
     //San pham hot 
     function showsphot() {
         $conn = connect();

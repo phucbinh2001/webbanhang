@@ -17,16 +17,19 @@
                 <img src="../view/img/logo.png" alt="">
             </div>
         </a>
-            <form>
-                <input class="search" type="text" placeholder="Nhập tên sách, tuyên tập, tác giả...">
-                <button class="btn">tìm kiếm</button>
+            <form action="../controller/index.php?act=search" method="post">
+                <input name="key" class="search" type="text" value="" placeholder="Nhập tên sách...">
+                <input type="submit" value="Tìm kiếm" name="search" class="btn">
+                
             </form>
             <div class="login">
+                <a href="index.php?act=cart" style="color: black"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
                 <?php
                 if (isset($_SESSION['sid'])&&($_SESSION['sid'])>0) {
                     echo '<button><a href="index.php?act=user&logout=1">Đăng xuất</a></button>';
                 }else
                     echo '<button><a href="index.php?act=user">Đăng nhập</a></button>';
+                    // echo '<br><button><a href="index.php?act=user&idlogin=1">Đăng Ký</a></button>';
                 ?>
             </div>
         </div>

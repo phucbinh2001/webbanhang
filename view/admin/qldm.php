@@ -62,7 +62,7 @@
                     <input type="checkbox" <?=$check?> name="sort" id="">
                     <label for="sort">Hot</label>
                     <input type="hidden" name="id" value="<?=$chitietdm['id']?>">
-                    <input class="btn btn-primary btn-round" type="submit" value="Cập nhật" name="edit">
+                    <input class="btn btn-primary btn-round" id="mauxanh" type="submit" value="Cập nhật" name="edit">
                 </form>
             <?php 
                 }else{
@@ -71,7 +71,7 @@
                 <input class="form-control" type="text" name="name" id="" placeholder="Tên danh mục">
                 <input type="checkbox" name="sort" id="">
                 <label for="sort">Hot</label>
-                <input class="btn btn-primary btn-round" type="submit" value="Thêm" name="submit">
+                <input class="btn btn-primary btn-round" id="mauxanh" type="submit" value="Thêm" name="submit">
             </form>
             <?php
             };
@@ -79,11 +79,11 @@
             <table class="table">
                 <tr>
                     <thead class=" text-primary">
-                        <th>Id</th>
-                        <th>Danh mục</th>
-                        <th>Sort</th>
-                        <th>Sửa</th>
-                        <th>Xóa</th>
+                        <th  id="chuxanh">Id</th>
+                        <th  id="chuxanh">Danh mục</th>
+                        <th  id="chuxanh">Sort</th>
+                        <th  id="chuxanh">Sửa</th>
+                        <th  id="chuxanh">Xóa</th>
                     </thead>
                 </tr>
                 <?php
