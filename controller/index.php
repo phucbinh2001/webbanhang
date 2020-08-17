@@ -79,24 +79,25 @@
             break;
 
             case 'cart':
+                // unset($_SESSION['cart']);
+                if (!isset($_SESSION['cart'])) 
+                    $_SESSION['cart'] = [];
                 if (isset($_POST['mua'])&&($_POST['mua'])) {
-                    if (!isset($_SESSION['cart'])) {
-                        $_SESSION['cart'] = [];
-                    } else {
+                    if(isset($_SESSION['cart'])) {
                         $vitri = -1;
+                        $name = $_POST['namesp'];
+                        $soluong = $_POST['soluongsp'];
+                        $price = $_POST['pricesp'];
+                        $img = $_POST['imgsp'];
                         $id = $_POST['idsp'];   
                         for ($i=0; $i < sizeof($_SESSION['cart']); $i++) { 
                             if($id==$_SESSION['cart'][$i][3]) 
-                                $vitri = $i;
-                                $name = $_POST['namesp'];
-                                $soluong = 1;
-                                $price = $_POST['pricesp'];
-                                $img = $_POST['imgsp'];              
-                                $item = [$name, $price, $img, $id, $soluong];                           
+                                $vitri = $i;                             
                         }
                         if($vitri > -1) {
                             $_SESSION['cart'][$vitri][4] += $soluong;
                         }else{
+                            $item = [$name, $price, $img, $id, $soluong];
                             $_SESSION['cart'][] = $item;
                         }
                     }

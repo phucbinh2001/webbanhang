@@ -11,8 +11,10 @@
             <th>Thành tiền</th>
         </tr>
     <?php
-        if(!is_array($_SESSION['cart']))
+        if(sizeof($_SESSION['cart'])==0){
+            // var_dump(sizeof($_SESSION['cart']));
             echo "Giỏ hàng trống";
+        }
         else{
             // var_dump($_SESSION['cart']);
             for ($i=0; $i < sizeof($_SESSION['cart']); $i++) { 
@@ -28,14 +30,40 @@
                     <td>'.$id.'</td>
                     <td>'.$img.'</td>
                     <td>'.$name.'</td>
-                    <td>'.$price.'</td>
-                    <td>'.$soluong.'</td>
-                    <td>'.$thanhtien.'</td>
+                    <td class="price"'.$i.'">'.$price.'</td>
+                    <td> <div class="soluong_cart">
+                        <div class="btn" id="btn_giam " onclick="giam('.$i.')"> - </div>
+                        <input type="number" name="soluongsp" id="soluong" class="soluong_vl" value="'.$soluong.'">
+                        <div class="btn" id="btn_tang " onclick="tang('.$i.')"> + </div>
+                        </div></td>
+                    <td class="thanhtien"'.$i.'">'.$thanhtien.'</td>
                 </tr>';
             }
         }
 
     ?>
+    <script>
+        soluong = document.getElementsByClassName('soluong_vl');
+        thanhtien = document.getElementsByClassName('thanhtien');
+        price = document.getElementsByClassName('price');
+        function giam(i) {
+            if(soluong[i].value==1)
+                alert("Hết giảm nữa được rồi");
+            else
+                soluong[i].value --; 
+            tinhtien(i);
+        }
+
+        function tang(i) {
+            soluong[i].value ++;
+            tinhtien(i)
+        }
+
+        function tinhtien(i) {
+            thanhtien[i].innerHTML = Number(price[i].innerHTML) * soluong[i].value; 
+        }
+
+    </script>
     </table>
     <a href="#" class="btn">Đặt hàng ngay</a>
 </div>

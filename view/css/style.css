@@ -1031,6 +1031,48 @@ footer {
     padding: 0 40px;
 }
 
+.txt-detail .soluong {
+    display: flex;
+    border: 1px solid #999;
+    width: min-content  ;
+}
+
+.txt-detail .btn {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+}
+
+.txt-detail .btn:first-child {
+    border-right: 1px solid #999;
+}
+
+.txt-detail .btn:last-child {
+    border-left: 1px solid #999;
+}
+
+.txt-detail input#soluong {
+    width: 30px;
+    height: 30px;
+    border: none;
+    text-align: center;
+    margin-left: 15px;
+}
+
+.mua_btn {
+    padding: 10px 20px;
+    width: max-content !important;
+    height: max-content !important;
+    background-color: #168f77;
+    cursor: pointer;
+    color: #fff;
+    margin-top: 20px;
+    font-size: 12pt;
+    border: none;
+}
+
 .left-wrap-cnt .txt-detail h1 {
     margin: 0;
     text-transform: capitalize;
@@ -1160,6 +1202,41 @@ table.cart, tr{
     display: inline-block;
 }
 
+.soluong_cart {
+    display: flex;
+    border: 1px solid #999;
+    width: min-content  ;
+    height: 32px;
+    align-items: center;
+}
+
+.soluong_cart .btn {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 10px;
+    cursor: pointer;
+    background-color: #fff;
+    color: #000;
+    display: flex;
+    justify-content: center;
+}
+
+.soluong_cart .btn:first-child {
+    border-right: 1px solid #999;
+}
+
+.soluong_cart .btn:last-child {
+    border-left: 1px solid #999;
+}
+
+.soluong_cart input#soluong {
+    width: 50px;
+    height: 30px;
+    border: none;
+    text-align: center;
+    margin-left: 15px;
+}
 
 
 /* //COMMENT */

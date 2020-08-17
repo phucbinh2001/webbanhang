@@ -4,6 +4,7 @@
     else {
         $idsp = $spct['id'];
         $namesp = $spct['name'];
+        // $price = number_format($spct['price'], 0, ',', '.');
         $price = $spct['price'];
         $vote = $spct['vote'];
         $view = $spct['view'];
@@ -44,13 +45,40 @@
                             <p>Lượt xem: <span><?=$view?></span></p>
                             <p>Đánh giá: <span><?=$vote?> sao</span></p>
                             <p>Giá sách: <span class="price"><?=$price?>đ</span></p>
+                            
+                            
                             <form action="index.php?act=cart" method="post">
+                                <input type="hidden" name="soluong" value="<?= $soluong ?>">
                                 <input type="hidden" name="namesp" value="<?= $namesp ?>">
                                 <input type="hidden" name="pricesp" value="<?= $price ?>">
                                 <input type="hidden" name="idsp" value="<?= $idsp ?>">
                                 <input type="hidden" name="imgsp" value='<?= $img ?>'>
-                                <input type="submit" value="Mua ngay" name="mua">
+                            <div class="soluong">
+                                <div class="btn" id="btn_giam " onclick="giam()"> - </div>
+                                <input type="number" name="soluongsp" id="soluong" value="1">
+                                <div class="btn" id="btn_tang " onclick="tang()"> + </div>
+                            </div>
+                                <input type="submit" value="Mua ngay" name="mua" class="mua_btn">
                             </form>
+                            <script>
+                                btntang = document.getElementById("btn_giam");
+                                btngiam = document.getElementById("btn_tang");
+                                soluong = document.getElementById("soluong").value;
+                                function giam() {
+                                    if (soluong=="1") {
+                                        alert("Còn gì đâu mà giảm")
+                                    }else{
+                                        soluong--
+                                        document.getElementById("soluong").value = soluong;  
+                                    } 
+                                }
+
+                                function tang() {
+                                    soluong++;
+                                    document.getElementById("soluong").value = soluong;  
+                                }
+                            </script>
+        
                         </div>
                     </div>
                     <div class="box_comment">
