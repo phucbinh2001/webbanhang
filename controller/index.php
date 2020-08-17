@@ -79,6 +79,10 @@
             break;
 
             case 'cart':
+                //Xóa sản phẩm
+                if(isset($_GET['iddh'])&&($_GET['iddh'])>=0) {
+                    array_splice($_SESSION['cart'], $_GET['iddh'], 1);
+                }
                 // unset($_SESSION['cart']);
                 if (!isset($_SESSION['cart'])) 
                     $_SESSION['cart'] = [];

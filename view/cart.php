@@ -1,5 +1,15 @@
 <div class="cart_box">
     <h2 style="text-align: center;">Giỏ hàng của bạn </h2>
+    <?php 
+        if(sizeof($_SESSION['cart'])==0){
+            // var_dump(sizeof($_SESSION['cart']));
+            echo '<div class="giotrong">
+                <img src="../view/img/emty.png" alt="">
+                <p>Chưa có gì trong giỏ hàng!</p>
+            </div>';
+        }
+        else{
+    ?>
     <table class="cart" align="center">
         <tr>
             <th></th>
@@ -9,13 +19,9 @@
             <th>Đơn giá</th>
             <th>Số lượng</th>
             <th>Thành tiền</th>
+            <th>Xóa</th>
         </tr>
     <?php
-        if(sizeof($_SESSION['cart'])==0){
-            // var_dump(sizeof($_SESSION['cart']));
-            echo "Giỏ hàng trống";
-        }
-        else{
             // var_dump($_SESSION['cart']);
             for ($i=0; $i < sizeof($_SESSION['cart']); $i++) { 
                 $name = $_SESSION['cart'][$i][0];
@@ -24,6 +30,7 @@
                 $id = $_SESSION['cart'][$i][3];
                 $soluong = $_SESSION['cart'][$i][4];
                 $thanhtien = $soluong * $price;
+                $linkdel = 'index.php?act=cart&iddh='.$i;
                 echo
                 '<tr>
                     <td><input type="checkbox" name="selectbuy" id=""></td>
@@ -37,9 +44,10 @@
                         <div class="btn" id="btn_tang " onclick="tang('.$i.')"> + </div>
                         </div></td>
                     <td class="thanhtien"'.$i.'">'.$thanhtien.'</td>
+                    <td><a href="'.$linkdel.'">Xóa</a></td>
                 </tr>';
             }
-        }
+        
 
     ?>
     <script>
@@ -65,5 +73,6 @@
 
     </script>
     </table>
-    <a href="#" class="btn">Đặt hàng ngay</a>
+    <a href="index.php?act=chitietdh" class="btn">Đặt hàng ngay</a>
+    <?php } ?>
 </div>
